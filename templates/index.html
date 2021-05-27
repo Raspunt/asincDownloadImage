@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="static/AllStyles.css"> 
+<title>Start page</title>
+</head>
+<body>
+
+
+
+
+    <div class = 'container'>
+
+      
+            
+            <div class = 'mt-4'>
+                
+                <form action="" method="post" >
+                    
+                    <div class="form-group">
+                        <label >Напишите что будем искать</label>
+                        <input name = "sq"  class="form-control"   placeholder="search">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label >Сколько картинок нужно искать?</label>
+                        <select name='page_count' class="form-control" id="exampleFormControlSelect1">
+                            <option>2</option>
+                            <option>4</option>
+                            <option>6</option>
+                            <option>8</option>
+                            <option>10</option>
+                            <option>12</option>
+                            
+                        </select>
+                    </div>
+                    <div class = 'row mt-3'>
+                        <button class=" btn btn-primary col ml-4"> Поиск </button>
+                        <a class = "btn btn-success col " href="/">Отменить </a>
+                    </div>     
+                        
+                </form>
+                
+                
+            </div>
+            
+        
+    <hr>
+
+
+    <div class = 'row '>
+        {% for im in imgs %}
+
+        <a href="/download/{{ im.id }}" class='col'>
+            <img class = 'images_list'  src="{{ im.pathUrl }}" >
+        </a>
+
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>

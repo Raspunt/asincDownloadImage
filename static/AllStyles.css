@@ -1,0 +1,31 @@
+
+body {
+    background-color: rgba(82, 80, 77, 0);
+}
+
+
+
+.images_list {
+    padding: 1px;
+    background-color: green;
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 200px;
+    margin-top: 5px ;  
+
+}
+
+
+
+
+
+
+
+.images_list:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.centerButton{
+    margin: 10px;
+}
+
